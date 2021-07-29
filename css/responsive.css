@@ -1,0 +1,359 @@
+/*Pour un minimum de 768px*/
+
+@media (min-width: 769px) {
+    nav li {
+        float: left;
+    }
+    nav .navigation {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    nav .menu-icon {
+        display: none;
+    }
+}
+
+@media all and (max-width:1440px) {
+
+    p, li, a{
+        font-size:1vw;
+    }
+    nav,
+    main,
+    footer {
+        width: 80%;
+    }
+        nav {
+        left: 10%;
+    }
+
+    h2 {
+        font-size:2vw;
+    }
+    h1 {
+        font-size:2.5vw;
+    }
+
+        .figure>img {
+        width: 20vw;
+    }
+
+    .travaux .figure {
+        margin-bottom:1vw;
+    }
+    .article .description {
+        margin: 0;
+    }
+
+    footer {
+        margin:30vw auto;
+    }
+}
+
+@media all and (max-width:1024px) {
+    /*---ALL---------------*/
+    nav,
+    main,
+    footer {
+        width: 90%;
+    }
+    p,
+    li,
+    a {
+        font-size: 1.5vw;
+    }
+    /*---BOUTONS---------------*/
+    .bouton {
+        height: 2.5vw;
+    }
+    .banniere-description .bouton-banniere {
+        width: 8vw;
+    }
+    form .bouton-formulaire {
+        margin-top: 1vw;
+        width: 15vw;
+    }
+    /*---HEADER---------------*/
+    nav {
+        left: 5%;
+    }
+    /*---TITRES---------------*/
+    h1 {
+        font-size: 3.5vw;
+    }
+    form h3 {
+        font-size: 2.2vw;
+    }
+    /*---BANNIERE---------------*/
+    figcaption .arrow {
+        height: 2.5vw;
+        padding: 0.30vw;
+        width: 1vw;
+    }
+    figcaption .banniere-description {
+        margin-right: 12vw;
+    }
+    .banniere-description h2 {
+        font-size: 2.5vw;
+    }
+    /*---SERVICES---------------*/
+    .description-des-services .services {
+        justify-content: center;
+        margin-bottom: 3.5vw;
+    }
+    .services .detail {
+        margin-left: 2vw;
+    }
+    /*---TRAVAUX---------------*/
+    .travaux {
+        width: 90%;
+        margin: auto auto 5vw auto;
+    }
+    .figure>img {
+        width: 18vw;
+    }
+    figcaption .oeil {
+        border: 1px solid #fff;
+        bottom: 66%;
+    }
+    .oeil a {
+        font-size: 0.8vw;
+    }
+    /*---FOOTER---------------*/
+    footer .filtre {
+        display: none;
+    }
+    footer form {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        margin: 7vw auto 5vw auto;
+        align-items: center;
+        line-height: 3vw;
+        background: #F3F1F1;
+    }
+    form .data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    form input {
+        height: 2vw;
+        margin-bottom: 1vw;
+    }
+}
+
+
+/*----- 768PX -----------------*/
+
+@media all and (max-device-width:768px) {
+    /*---ALL---------------*/
+    p,
+    li,
+    a {
+        font-size: 2.5vw;
+    }
+    .bouton {
+        border-radius: 0.5vw;
+    }
+    main {
+        margin-top: 20vw;
+    }
+    /* Eviter la superposition du header fixe sur une ancre*/
+    /* On fixe une marge et un padding plus élevé sur mobile*/
+    #services:target,
+    #portfolio:target {
+        padding-top: 15vw;
+        margin-top: -15vw;
+    }
+    /*---BOUTONS---------------*/
+    .banniere-description .bouton-banniere {
+        width: 18vw;
+        height: 6vw;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        color: #fff;
+    }
+    form .bouton-formulaire {
+        width: 20vw;
+        height: 6vw;
+    }
+    /*---HEADER---------------*/
+    nav {
+        height: 15vw;
+        line-height: 15vw;
+    }
+    nav p img {
+        max-width: 30vw;
+    }
+    nav .navigation {
+        margin-top: -2px;
+    }
+    nav li a {
+        padding-bottom: 1.5vw;
+        font-size: 3vw;
+    }
+    nav .menu-icon {
+        padding-top: 7.5vw;
+    }
+    /*On retire le border top du li, inutile pour ce format*/
+    li#actif,
+    .navigation li:hover {
+        border-top: 0 solid white;
+    }
+    /*---BANNIERE---------------*/
+    /*On attribut une nouvelle bannière pour le format mobile*/
+    article .figure-banniere {
+        height: 40vw;
+        background: url('../img/cta2/cta2-bg.jpg') no-repeat center;
+        border-radius: 0.5vw;
+        background-size: cover;
+        margin: 0 0 15vw 0;
+    }
+    /*On cache la banniere, les fleches et les 2 lignes*/
+    figcaption .arrow,
+    .figure-banniere img,
+    .figure-banniere .ligne-transparente,
+    .figure-banniere .ligne-banniere {
+        visibility: hidden;
+    }
+    /*On change la couleur et on repositionne les éléments de la bannière*/
+    figcaption .banniere-description {
+        margin: auto;
+        width: 80%;
+    }
+    .banniere-description p,
+    .banniere-description h2 {
+        color: #fff;
+        text-align: center;
+    }
+    .banniere-description h2 {
+        font-size: 4vw;
+    }
+    /*---SERVICES---------------*/
+    /*Attribution d'un display block pour la page services et projets*/
+    #services,
+    #portfolio {
+        display: block;
+        margin: auto;
+        height: auto;
+    }
+    h1 {
+        font-size: 6vw;
+    }
+    /*On cache l'esthétique sous le titre */
+    .article .sous-le-titre {
+        visibility: hidden;
+    }
+    /*On fait disparaitre le cercle et le point bleu */
+    .services .cercle,
+    .cercle .background-point-bleu {
+        display: none;
+    }
+    .article .description {
+        width: auto;
+        margin: auto;
+    }
+    .article .figure-ordi {
+        margin: 3vw auto;
+        width: 50%;
+    }
+    .article .description-des-services {
+        text-align: center;
+        width: auto;
+        margin: 5vw auto 5vw auto;
+    }
+    .description-des-services .services {
+        margin-bottom: 15vw;
+    }
+    .detail h4 {
+        font-size: 3.5vw;
+    }
+    /*---TRAVAUX---------------*/
+     ::-webkit-scrollbar {
+        width: 2px;
+        height: 2px;
+    }
+     ::-webkit-scrollbar-button {
+        width: 2px;
+        height: 2px;
+    }
+    /*Réglages du menu*/
+    .article .menu {
+        margin: 5vw auto 5vw auto;
+    }
+    .menu li {
+        padding: 1.8vw 2.4vw;
+    }
+    .menu li:hover::before,
+    .menu li:nth-child(1) a::before {
+        border-width: 0;
+        margin-left: 0;
+    }
+    /*Personnalisation de l'élément parent bloc*/
+    .bloc {
+        height: 28vw;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .travaux {
+        flex-wrap: nowrap;
+        width: auto;
+        height: auto;
+    }
+    .figure>img {
+        width: 40vw;
+        border-radius: 0.5vw;
+    }
+    .travaux .figure {
+        margin-right: 10vw;
+        width: 50vw;
+    }
+    figcaption .oeil {
+        bottom: 75%;
+        right: 3vw;
+        width: 6.4vw;
+        height: 6.4vw;
+        border-radius: 50%;
+        border: 0.08vw solid #fff;
+    }
+    .oeil img,
+    .oeil a {
+        width: 2vw;
+        height: 2vw;
+    }
+    /*---MAP + FORMULAIRE---------------*/
+    /* On cache la map*/
+    footer iframe {
+        display: none;
+    }
+    /*On retravail le formulaire sous les images*/
+    footer form {
+        top: 0;
+        width: 100%;
+        height: 70vw;
+        line-height: 5vw;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    form .data {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    form input {
+        height: 5vw;
+    }
+    form h3 {
+        font-size: 3.5vw;
+    }
+    form textarea {
+        height: 20vw;
+    }
+    form input,
+    form textarea {
+        font-size: 2.5vw;
+    }
+}
